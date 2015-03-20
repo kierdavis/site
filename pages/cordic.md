@@ -287,7 +287,7 @@ Therefore, we have:
     }
 
     function cordic(θ) {
-        c ← 1
+        c ← K
         s ← 0
         φ ← 0
         for i in 0 .. N-1 {
@@ -302,8 +302,6 @@ Therefore, we have:
             s ← s_new
             φ ← φ + (direction × β[i])
         }
-        c ← c × K
-        s ← s × K
         return c, s
     }
 
@@ -324,7 +322,7 @@ comparison against $0$, which is simpler to compute:
     }
 
     function cordic(θ) {
-        c ← 1
+        c ← K
         s ← 0
         φ ← θ
         for i in 0 .. N-1 {
@@ -339,8 +337,6 @@ comparison against $0$, which is simpler to compute:
             s ← s_new
             φ ← φ - (direction × β[i])
         }
-        c ← c × K
-        s ← s × K
         return c, s
     }
 
