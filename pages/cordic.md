@@ -1,8 +1,6 @@
-% Computing sin & cos with synthesisable Verilog
-% Kier Davis
-% 20 March 2015
-
-# Computing sin & cos with synthesisable Verilog
+---
+title: Computing sin & cos with synthesisable Verilog
+---
 
 The [CORDIC][cordic] algorithm is a clever method for accurately computing
 trigonometric functions using only additions, bitshifts and a small lookup table.
