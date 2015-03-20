@@ -45,7 +45,7 @@ us that it is equivalent to left-multiplying by a particular matrix:
         s ← 0
         for i in 0 .. N-1 {
             rotation_matrix ← [[cos α[i], -sin α[i]],
-                               [sin α[i],  cos α[i]]]
+                                [sin α[i],  cos α[i]]]
             [c, s] ← rotation_matrix × [c, s]
         }
         return c, s
