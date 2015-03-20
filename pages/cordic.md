@@ -270,7 +270,9 @@ $$K = \prod_{i=0}^{N-1} \cos \beta_i$$
 
 It can be shown through the use of trigonometric identities that:
 
-$$K = \prod_{i=0}^{N-1} \frac{1}{\sqrt{1 + 2^{-2i}}} = 0.607252935008881\dots$$
+$$K = \prod_{i=0}^{N-1} \frac{1}{\sqrt{1 + 2^{-2i}}}$$
+
+$K$ tends to approximately $0.607252935$ as $N$ increases.
 
 Therefore, we have:
 
