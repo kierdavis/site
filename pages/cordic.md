@@ -5,6 +5,8 @@ title: Computing sin & cos with synthesisable Verilog
 The [CORDIC][cordic] algorithm is a clever method for accurately computing
 trigonometric functions using only additions, bitshifts and a small lookup table.
 
+[cordic]: http://en.wikipedia.org/wiki/CORDIC
+
 ## The Algorithm
 
 It's well known that rotating the vector $(1, 0)$ anticlockwise about the
@@ -35,6 +37,8 @@ values of $\alpha_i$ are, we just want their sum to be equal to $\theta$.
 
 How do we rotate a vector? [The page for rotation on Wikipedia][rotation] tells
 us that it is equivalent to left-multiplying by a particular matrix:
+
+[rotation]: http://en.wikipedia.org/wiki/Rotation_%28mathematics%29#Two_dimensions
 
     α ← [
         ...
@@ -535,6 +539,3 @@ The complete source code can be downloaded here:
 
 * [`cordic.v`](/static/download/cordic.v)
 * [`cordic_test.v`](/static/download/cordic_test.v)
-
-[cordic]: http://en.wikipedia.org/wiki/CORDIC
-[rotation]: http://en.wikipedia.org/wiki/Rotation_%28mathematics%29#Two_dimensions
