@@ -1,5 +1,5 @@
 ---
-title: Computing sin & cos with synthesisable Verilog
+title: Computing sin & cos in hardware with synthesisable Verilog
 ---
 
 The [CORDIC][cordic] algorithm is a clever method for accurately computing
