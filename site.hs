@@ -10,13 +10,13 @@ main = hakyll $ do
     
     match "*.md" $ do
         route $ setExtension "html"
-        compile $ pandocCompilerWith (def {readerExtensions = pandocExtensions}) (def {writerHTMLMathMethod = MathJax ""})
+        compile $ pandocCompilerWith defaultHakyllReaderOptions (defaultHakyllWriterOptions {writerHTMLMathMethod = MathJax ""})
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
     
     match "pages/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompilerWith (def {readerExtensions = pandocExtensions}) (def {writerHTMLMathMethod = MathJax ""})
+        compile $ pandocCompilerWith defaultHakyllReaderOptions (defaultHakyllWriterOptions {writerHTMLMathMethod = MathJax ""})
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
