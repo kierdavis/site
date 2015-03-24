@@ -311,9 +311,9 @@ Therefore, we have:
         return c, s
     }
 
-Finally, we will change $\phi$ so that it now holds $\theta -$ whatever it was
-holding before this change. This replaces the comparison against $\theta$ with a
-comparison against $0$, which is simpler to compute:
+Finally, we will change $\phi$ so that it now holds $\theta$ minus "whatever it
+was holding before this change". This replaces the comparison against $\theta$
+with a comparison against $0$, which is simpler to compute:
 
     β ← [
         atan 2^0,
