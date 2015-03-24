@@ -1,3 +1,7 @@
+body {
+    max-width: 57em; /* overriding 42em in style.css */
+}
+
 pre {
     background: #ffeeee;
     padding-left: 5px;
