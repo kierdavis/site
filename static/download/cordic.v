@@ -51,8 +51,6 @@ input [31:0] angle_in;
 output [31:0] cos_out;
 output [31:0] sin_out;
 
-output [31:0] angle;
-
 wire [31:0] cos_out = cos;
 wire [31:0] sin_out = sin;
 
