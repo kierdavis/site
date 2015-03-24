@@ -1,0 +1,62 @@
+https://keybase.io/kierdavis
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://kierdavis.com
+  * I am kierdavis (https://keybase.io/kierdavis) on keybase.
+  * I have a public key with fingerprint 69CB 931A 0A73 A3A2 3FB2  7B7F 6DA4 DA6B 003D 9C5A
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "69cb931a0a73a3a23fb27b7f6da4da6b003d9c5a",
+            "host": "keybase.io",
+            "key_id": "6DA4DA6B003D9C5A",
+            "uid": "e38147bd998e613bb1871996c6c1c700",
+            "username": "kierdavis"
+        },
+        "service": {
+            "hostname": "kierdavis.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1398115511,
+    "expire_in": 157680000,
+    "prev": "511daa7cbaadafc867f6de301c96eabade955690ccc9ba108786e24ff31ba4ae",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+owFdkV9IU1Ecx++WiWuFFiVkPsSB8KE57tnd/bfS3JJ8CEoWERk6zz33bF7ndvff
+iQ3LoL8SYTCUhBKDQtCIJExBCxppvvQShCMZKZa2HsIoSIXulXrpvBzO7/f9fn6/
+3/nd2bWNMhoCD+f9VNVAg2Hu5ZpEnTnbM9EJJFXuAI5O4Cdbl1cJ+kgkFFGCMeAA
+nIglkYGIRjyDGGRjvJKNl3gvJyO7jDiJphlZxCwCFtCiRnWHhpFQlFgVVYtpD48i
+65xap73Wybk0fa14nHVqufhWgjACtPOSLIoC4SAjSVDgoShymMMQ8zStC6MkEkQB
+osMVEpFRQomClAVo4YSCid60Xvt/iRWrAc0diqgxFattWqolFgs5dGesI6RL24nk
++QvxSEpQ1ibXDAkSiSpqEDigpsQxRadCRhQgZFkILYAkQ0qEeBRdwfKcQGtHL0MS
+GlJTyAjxWEJIRl4scPpXEYaGWOQIkpBMRJblRBpjLEoI0gIvcMRm93oZKCE7IkAf
+KxxUgYPX2kQ+DRlVfEEUi0cISN0wlBdQBiNVuN2o747aYSr5t9HJhiJqcMWDy5vb
+TPcrzZbrdYu44HWg8Oa4i5x/MouFjcaNoUwhGitrP33bnCPptX7ZXV61M//UdHV0
+Ji+HB071bprfWI+OdC9lge3TZs8g3Wh43J6qLLu0PJeZfcY0fTn2cbVpdXgsfcT5
+s/hBpzVRtLSZDb8/PIF2X/HX7B0+lO/PsN3k18j0iVyutCtTtXh33Pytz5B3LYwU
+U2CwdX3StHxx5t5yq3HY9V2Y/3pACVe41xemq/sMXVM1fSX17rFkGjHQsi+VHbUr
+9ltvs4/w0KveesH/LgfcyefxcyfhyoWk70WFu27/h98/rn2m4tV7fAfTdaWXpwqa
+/wA=
+=HTY+
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kierdavis
+
