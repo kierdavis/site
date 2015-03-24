@@ -136,60 +136,13 @@ exceed the allocation size by. It can be assigned any value greater than one
 for a processor with a small amount of memory is 9 (to leave room for a chunk
 with an 8 word body).
 
-A slice proceeds by calculating the value of a *slice pointer*, equal to the
-current chunk pointer, plus `N` for the length of the chunk header, plus the
-allocation size in bytes. The newly created chunk that the slice pointer refers
-to will be called the *secondary sliced chunk*; the parent chunk will be
-reduced in length and termed the *primary sliced chunk*. Four memory store
-operations then take place (in any order):
+To perform a slice:
 
-  * The size of the secondary sliced chunk is set to the parent chunk size minus
-    `N` for the length of the parent chunk header, minus the requested
+  * The size of the chunk is decreased by `p` words, where `p` is equal to the
+    requested allocation size plus `N`. This creates room for a new chunk with
+    a body size equal to the requested allocation size.
+  * The size field of this newly created chunk is set to the requested
     allocation size.
-  * The next-pointer of the secondary sliced chunk is set to the next-pointer of
-    the parent chunk.
-  * The size of the primary sliced chunk is set to the requested allocation
-    size.
-  * The next-pointer that was followed to get to the parent chunk is updated to
-    point to the secondary sliced chunk (skipping the primary sliced chunk,
-    since that will be returned from `malloc`). If the parent chunk is the first
-    one in the free chunk list, the head pointer is instead updated to point
-    to the secondary sliced chunk.
-
-Finally, a pointer to the body of the primary sliced chunk is returned as the
-address of the allocated data.
-
-##### Example
-
-Suppose a portion of the free chunk list on a machine with `N` equal to 2 words
-is as follows:
-
-    ... ----> [5500] 0010  (length)
-              [5502] --------------------------------> [3400] 0080  (length)
-              [5504] ????  (leftover user data)        [3402] --------------------------------> ...
-              ...                                      [3404] ????  (leftover user data)
-              [5510] ????  (leftover user data)        ...
-                                                       [3480] ????  (leftover user data)
-
-A user wants to allocate data of size `0x20` bytes. The chunk at address
-`0x3400` is satisfies the criteria for a split.
-
-The slice pointer in this case will be `0x3422`, since it is the parent chunk
-address (`0x3400`) plus the length of the primary sliced chunk's header
-(2 bytes) plus the length of the primary sliced chunks' body (equal to the
-requested allocation size, `0x20` bytes). 
-
-    ... ----> [5500] 0010  (length)
-              [5502] --------------------------------> [3400] 0080  (length)
-              [5504] ????  (leftover user data)        [3402] --------------------------------> ...
-              ...                                      [3404] ????  (leftover user data)
-              [5510] ????  (leftover user data)        ...
-                                                       [3420] ????  (leftover user data)
-                                (slice pointer ---->)  [3422] ????  (leftover user data)
-                                                       [3424] ????  (leftover user data)
-                                                       ...
-                                                       [3480] ????  (leftover user data)
-
-The size of the secondary sliced chunk is set to `0x5e`, 
+  * The address of the newly created chunk's body is returned to the caller.
 
 #### use
