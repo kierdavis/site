@@ -30,7 +30,7 @@ main = hakyll $ do
     
     match "keybase.txt" $ do
         route   idRoute
-        compile compileFileCompiler
+        compile copyFileCompiler
     
     {-
     match "images/*" $ do
