@@ -1,8 +1,8 @@
 ---
-title: The malloc3 algorithm for memory allocation
+title: The malloc4 algorithm for memory allocation
 ---
 
-`malloc3` is a small system for managing memory allocations, much like the
+`malloc4` is a small system for managing memory allocations, much like the
 UNIX/Linux `malloc` system call.
 
 The system divides up the heap space into chunks, maintaining a linked list of
