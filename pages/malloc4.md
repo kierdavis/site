@@ -55,7 +55,9 @@ free chunk list
     the *chunk body* (the second word of the whole chunk). Storing meaningful
     data into a region normally reserved for usage by user code does not cause a
     problem, since a chunk is never under the control of user code and in the
-    free chunk list at the same time.
+    free chunk list at the same time. The list is always kept sorted in order of
+    ascending chunk address (i.e. each chunk only ever has a chunk with a
+    higher address as its next-pointer).
 
 head pointer
   : An `N`-byte variable/register/memory location holding a pointer to the first
@@ -99,6 +101,14 @@ address `FFFF` inclusive, the memory layout would now look like this:
               ....
               [FFFE] ????  (chunk 0000 body)
 
+#### Pseudocode implementation
+
+    init() {
+        head ← HEAPSTART
+        [HEAPSTART] ← HEAPSIZE - N
+        [HEAPSTART + N] ← NULL
+    }
+
 ### Allocation
 
 The first step in allocation is to round the requested allocation size up to the
@@ -118,11 +128,9 @@ is fetched and compared against the requested allocation size.
 
 If the end of the free chunk list is reached without either a *slice* or *fit*
 event occurring, then there are no free chunks large enough and so the system
-can be considered to be *out of memory*. The system may run a *coalesce* or a
-*sorted coalesce* (described in later sections) and then try the allocation
-algorithm again before reporting an error condition.
-
-#### slice
+can be considered to be *out of memory*. The system may run a *coalesce*
+(described in later sections) and then try the allocation algorithm again before
+reporting an error condition.
 
 A *slice* event means that the current chunk is fairly large in comparison to
 the requested allocation size, and so the chunk will be split into two. One will
@@ -145,8 +153,6 @@ To perform a slice:
     allocation size.
   * The address of the newly created chunk's body is returned to the caller.
 
-#### fit
-
 A *fit* event means that the current chunk is just large enough for the
 requested allocation size.
 
@@ -160,17 +166,7 @@ To perform a fit:
     previous chunk is set to `null` as well.
   * The address of the current chunk's body is returned to the caller.
 
-## Implementation
-
-### `init`
-
-    init {
-        head ← HEAPSTART
-        [HEAPSTART] ← HEAPSIZE - N
-        [HEAPSTART + N] ← NULL
-    }
-
-### `malloc`
+#### Pseudocode implementation
 
     malloc(size) {
         -- Round size up to word boundary
@@ -184,7 +180,7 @@ To perform a fit:
             next_chunk ← [this_chunk + N]
             
             if this_chunk_size >= size + Z*N {
-                -- split
+                -- slice
                 this_chunk_size ← this_chunk_size - size - N
                 new_chunk ← this_chunk + N + this_chunk_size
                 [this_chunk] ← this_chunk_size
@@ -209,7 +205,80 @@ To perform a fit:
             }
         }
         
-        -- Out-of-memory condition
+        -- Out of memory
         return NULL
     }
 
+### Deallocation
+
+Allocated chunks are deallocated by adding them to the free chunk list. Since
+the free chunk list is to be kept sorted, the system iterates through the list
+until it finds a suitable place to insert the chunk, then insert it. This
+mechanism also allows the condition of an already unallocated chunk being
+passed to `free` to be detected and handled.
+
+#### Pseudocode implementation
+
+    free(ptr) {
+        insert_chunk ← ptr - N
+        
+        last_chunk ← NULL
+        this_chunk ← head
+        
+        loop {
+            if insert_chunk == this_chunk {
+                -- Already unallocated, or NULL.
+                return
+            }
+            
+            else if this_chunk == NULL || insert_chunk < this_chunk {
+                if last_chunk == NULL {
+                    -- Insert insert_chunk at start of list.
+                    head ← insert_chunk
+                }
+                else {
+                    -- Insert insert_chunk between last_chunk and this_chunk.
+                    [last_chunk + N] ← insert_chunk
+                }
+                [insert_chunk + N] ← this_chunk
+                return
+            }
+            
+            else {
+                last_chunk ← this_chunk
+                this_chunk ← [this_chunk + N]
+            }
+        }
+    }
+
+### Cleanup (coalescing)
+
+Coalescing is the process of joining together adjacent free chunks, in order to
+increase the mean size of free chunks. The system iterates over the free chunk
+list, merging any two directly adjacent chunks into one larger one.
+
+#### Pseudocode implementation
+
+    coalesce() {
+        this_chunk ← head
+        
+        while this_chunk != NULL {
+            this_chunk_size ← [this_chunk]
+            next_chunk ← [this_chunk + N]
+            
+            if this_chunk + N + this_chunk_size == next_chunk {
+                -- this_chunk and next_chunk are directly adjacent
+                next_chunk_size ← [next_chunk]
+                -- Expand this_chunk to also contain next_chunk's header & body.
+                [this_chunk] ← this_chunk_size + N + next_chunk_size
+                -- Copy next-pointer from next chunk to this chunk.
+                [this_chunk + N] ← [next_chunk + N]
+                -- Do not move this_chunk forward since we may be able to
+                -- coalesce again.
+            }
+            
+            else {
+                this_chunk ← next_chunk
+            }
+        }
+    }
