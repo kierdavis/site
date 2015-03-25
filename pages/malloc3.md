@@ -69,7 +69,7 @@ slice
   : The act of splitting a prospective chunk into two smaller chunks during
     allocation.
 
-use
+fit
   : The act of allocating an unsplittable chunk.
 
 ## Overview of the system
@@ -112,11 +112,11 @@ is fetched and compared against the requested allocation size.
     a set number (`Z`) of words (i.e. if `chunksize >= reqsize + Z*N`), a
     *slice* occurs.
   * Otherwise, if the chunk size is greater than the requested allocation size
-    (i.e. if `chunksize >= reqsize`), a *use* occurs.
+    (i.e. if `chunksize >= reqsize`), a *fit* occurs.
   * Otherwise, the chunk is considered too small and the next chunk in the free
     chunk list is examined.
 
-If the end of the free chunk list is reached without either a *slice* or *use*
+If the end of the free chunk list is reached without either a *slice* or *fit*
 event occurring, then there are no free chunks large enough and so the system
 can be considered to be *out of memory*. The system may run a *coalesce* or a
 *sorted coalesce* (described in later sections) and then try the allocation
@@ -138,11 +138,78 @@ with an 8 word body).
 
 To perform a slice:
 
-  * The size of the chunk is decreased by `p` words, where `p` is equal to the
+  * The size of the chunk is decreased by `p` bytes, where `p` is equal to the
     requested allocation size plus `N`. This creates room for a new chunk with
     a body size equal to the requested allocation size.
   * The size field of this newly created chunk is set to the requested
     allocation size.
   * The address of the newly created chunk's body is returned to the caller.
 
-#### use
+#### fit
+
+A *fit* event means that the current chunk is just large enough for the
+requested allocation size.
+
+To perform a fit:
+
+  * The previous chunk in the free chunk list has its next-pointer changed to
+    point to the chunk after the one selected for the fit (i.e. it is set to be
+    the same as the next-pointer of the current chunk). If there is no previous
+    chunk, the head pointer is changed instead. If there is no next chunk (i.e.
+    the next-pointer of the current chunk is `null`), the next-pointer of the
+    previous chunk is set to `null` as well.
+  * The address of the current chunk's body is returned to the caller.
+
+## Implementation
+
+### `init`
+
+    init {
+        head ← HEAPSTART
+        [HEAPSTART] ← HEAPSIZE - N
+        [HEAPSTART + N] ← NULL
+    }
+
+### `malloc`
+
+    malloc(size) {
+        -- Round size up to word boundary
+        size = (size + N - 1) & -N
+        
+        last_chunk ← NULL
+        this_chunk ← head
+        
+        while this_chunk != NULL {
+            this_chunk_size ← [this_chunk]
+            next_chunk ← [this_chunk + N]
+            
+            if this_chunk_size >= size + Z*N {
+                -- split
+                this_chunk_size ← this_chunk_size - size - N
+                new_chunk ← this_chunk + N + this_chunk_size
+                [this_chunk] ← this_chunk_size
+                [new_chunk] ← size
+                return new_chunk + N
+            }
+            
+            else if this_chunk_size >= size {
+                -- fit
+                if last_chunk == NULL {
+                    head ← next_chunk
+                }
+                else {
+                    [last_chunk + N] ← next_chunk
+                }
+                return this_chunk + N
+            }
+            
+            else {
+                last_chunk ← this_chunk
+                this_chunk ← next_chunk
+            }
+        }
+        
+        -- Out-of-memory condition
+        return NULL
+    }
+
