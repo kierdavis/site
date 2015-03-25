@@ -92,15 +92,6 @@ it is the length of just the chunk body (which contains the word set in the
 third step, but not the word set in the second step). The next-pointer for this
 chunk is set to `null` to mark the end of the list.
 
-On a machine with N = 2 bytes and the heap extending from address `0000` to
-address `FFFF` inclusive, the memory layout would now look like this:
-
-    head ---> [0000] FFFE  (chunk 0000 header: length of body)
-              [0002] null  (chunk 0000 body: next-pointer)
-              [0004] ????  (chunk 0000 body)
-              ....
-              [FFFE] ????  (chunk 0000 body)
-
 #### Pseudocode implementation
 
     init() {
