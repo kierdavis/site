@@ -1,16 +1,3 @@
----
-title: A simple SPI driver with configurable timing parameters.
----
-
-[SPI][spi] is an communication protocol primarily used for connecting low-speed
-peripherals to a microcontroller. This page contains a simple Verilog
-implementation of a controller for SPI devices.
-
-[spi]: http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus
-
-Download: [`spi_master_driver.v`](/static/download/spi_master_driver.v)
-
-```verilog
 // A driver to communicate with a slave device over the SPI interface.
 //
 // A command-based interface is provided by the driver. Three commands are provided:
@@ -299,4 +286,3 @@ module spi_master_driver(
         endcase
     end
 endmodule
-```
