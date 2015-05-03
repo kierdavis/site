@@ -173,8 +173,8 @@ To perform a fit:
             if this_chunk_size >= size + Z*N {
                 -- slice
                 this_chunk_size ← this_chunk_size - size - N
-                new_chunk ← this_chunk + N + this_chunk_size
                 [this_chunk] ← this_chunk_size
+                new_chunk ← this_chunk + N + this_chunk_size
                 [new_chunk] ← size
                 return new_chunk + N
             }
