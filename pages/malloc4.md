@@ -31,7 +31,7 @@ chunk
     *chunk body*.
 
 chunk header
-  : A single `N`-byte word that represents the size of the *chunk body*, in
+  : A single `N`-byte integer that represents the size of the *chunk body*, in
     bytes.
 
 chunk body
@@ -216,7 +216,7 @@ passed to `free` to be detected and handled.
         last_chunk ← NULL
         this_chunk ← head
         
-        loop {
+        forever {
             if insert_chunk == this_chunk {
                 -- Already unallocated, or NULL.
                 return
@@ -244,9 +244,9 @@ passed to `free` to be detected and handled.
 
 ### Cleanup (coalescing)
 
-Coalescing is the process of joining together adjacent free chunks, in order to
-increase the mean size of free chunks. The system iterates over the free chunk
-list, merging any two directly adjacent chunks into one larger one.
+Coalescing is the process of joining together adjacent free chunks in order to
+increase their mean size. The system iterates over the free chunk list, merging
+any two directly adjacent chunks into one larger one.
 
 #### Pseudocode implementation
 
