@@ -8,14 +8,8 @@ main = hakyll $ do
     match "templates/*" $
         compile templateCompiler
     
-    match "*.md" $ do
-        route $ setExtension "html"
-        compile $ pandocCompilerWith defaultHakyllReaderOptions (defaultHakyllWriterOptions {writerHTMLMathMethod = MathJax ""})
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-            >>= relativizeUrls
-    
-    match "pages/*" $ do
-        route $ setExtension "html"
+    match (fromRegex "pages/.*\\.md") $ do
+        route $ gsubRoute "pages/" (const "") `composeRoutes` setExtension "html"
         compile $ pandocCompilerWith defaultHakyllReaderOptions (defaultHakyllWriterOptions {writerHTMLMathMethod = MathJax ""})
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
