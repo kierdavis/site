@@ -5,16 +5,22 @@ I hereby claim:
 
   * I am an admin of http://kierdavis.com
   * I am kierdavis (https://keybase.io/kierdavis) on keybase.
-  * I have a public key with fingerprint 69CB 931A 0A73 A3A2 3FB2  7B7F 6DA4 DA6B 003D 9C5A
+  * I have a public key with fingerprint E9EF A7E7 7400 759D A6AD  B9E0 8139 C5FC EDA7 3ABF
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
     "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.23"
+        },
         "key": {
-            "fingerprint": "69cb931a0a73a3a23fb27b7f6da4da6b003d9c5a",
+            "eldest_kid": "0101bae0be7eac7c792e1e219583ebc67c549800628df39acc68ea126a745dd572610a",
+            "fingerprint": "e9efa7e77400759da6adb9e08139c5fceda73abf",
             "host": "keybase.io",
-            "key_id": "6DA4DA6B003D9C5A",
+            "key_id": "8139c5fceda73abf",
+            "kid": "0101bae0be7eac7c792e1e219583ebc67c549800628df39acc68ea126a745dd572610a",
             "uid": "e38147bd998e613bb1871996c6c1c700",
             "username": "kierdavis"
         },
@@ -25,34 +31,41 @@ To claim this, I am signing this object:
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1398115511,
+    "ctime": 1447275813,
     "expire_in": 157680000,
-    "prev": "511daa7cbaadafc867f6de301c96eabade955690ccc9ba108786e24ff31ba4ae",
-    "seqno": 7,
+    "prev": "067a60e9901de6c635214c8f938144dd17ce6811dbd3baf687a465ddbbc769dc",
+    "seqno": 14,
     "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: GnuPG v2.0.22 (GNU/Linux)
+Version: GnuPG v2
 
-owFdkV9IU1Ecx++WiWuFFiVkPsSB8KE57tnd/bfS3JJ8CEoWERk6zz33bF7ndvff
-iQ3LoL8SYTCUhBKDQtCIJExBCxppvvQShCMZKZa2HsIoSIXulXrpvBzO7/f9fn6/
-3/nd2bWNMhoCD+f9VNVAg2Hu5ZpEnTnbM9EJJFXuAI5O4Cdbl1cJ+kgkFFGCMeAA
-nIglkYGIRjyDGGRjvJKNl3gvJyO7jDiJphlZxCwCFtCiRnWHhpFQlFgVVYtpD48i
-65xap73Wybk0fa14nHVqufhWgjACtPOSLIoC4SAjSVDgoShymMMQ8zStC6MkEkQB
-osMVEpFRQomClAVo4YSCid60Xvt/iRWrAc0diqgxFattWqolFgs5dGesI6RL24nk
-+QvxSEpQ1ibXDAkSiSpqEDigpsQxRadCRhQgZFkILYAkQ0qEeBRdwfKcQGtHL0MS
-GlJTyAjxWEJIRl4scPpXEYaGWOQIkpBMRJblRBpjLEoI0gIvcMRm93oZKCE7IkAf
-KxxUgYPX2kQ+DRlVfEEUi0cISN0wlBdQBiNVuN2o747aYSr5t9HJhiJqcMWDy5vb
-TPcrzZbrdYu44HWg8Oa4i5x/MouFjcaNoUwhGitrP33bnCPptX7ZXV61M//UdHV0
-Ji+HB071bprfWI+OdC9lge3TZs8g3Wh43J6qLLu0PJeZfcY0fTn2cbVpdXgsfcT5
-s/hBpzVRtLSZDb8/PIF2X/HX7B0+lO/PsN3k18j0iVyutCtTtXh33Pytz5B3LYwU
-U2CwdX3StHxx5t5yq3HY9V2Y/3pACVe41xemq/sMXVM1fSX17rFkGjHQsi+VHbUr
-9ltvs4/w0KveesH/LgfcyefxcyfhyoWk70WFu27/h98/rn2m4tV7fAfTdaWXpwqa
-/wA=
-=HTY+
+owGtkm1QVFUYxxcKEcsBB3MEctzuSAItyz2793UnkRAKCDWTYLSR7d5zz7IXlr3L
+7oXlZZgQ0B1XM8c0KmEzaMLZlAqYdLKBHYjGgF7FpAF8ZSgwp3JQCJW6l8EPNX3s
+25lzfs/z/P//5xxa/pBmadButu/ezVZTd9DAJK/J3XQqtgrjJaECM1Vh0CYiu6ye
+7FwxwkxYEargORfSi5LWLglIX+jSLjI6rAw5XaJkVyhcz+gNRqxap/JqNbIJyCWb
+i0RBfQU44DmE84hGHKQhzRoQQAbAkowR8ZCiIUmwDI5TBkawGFkOQopBHDBQHE2Q
+gkDSBgrgnDLQItoLkNPhFFWJGGKRhaMRTRM4TpOswFGcwLMIZ4CRhaQFIoGjjRxv
+UQqtkkv+hxlsQal5Qd5/8P+z7tKFdsjIAILmBZZlEAWMPA8YGrAsBSkIII3jKuhC
+zgfBi8gpcGWiS01VuS4TIVKTVa38G9FDqVipdjglWYKSTXmyyrLDpFbKFQ4VdSPe
+vNjEzIt2QQlyYYHvLG4QKCiURbUtIAjaQJNKKjoMlTtEJzKLKkHSlOIVx9U5qEyN
+h6I5CkcsiwMBKS6MpAEQkLGwqk9CEAANEcUAIPCCkecsFENzBKXkwvOQplgBYqqv
+ErukjlSEcgVKT5dYYOfkUifCqvcFP/6wJmipZklIsPpHNcvCIh583NDM8PuP1QXW
+h7YSWU1jbT8gv6YoFeTXRYsXdMcr8zz6DSvbmmZ+tkZnfsNviurqz71xbltw0q/Y
+TND7g3eifccup3SnOkb790Y1xKYnbS1HvRcjh3LtSYbmgaxm7a27f1XUBvnm7m+3
++M+HfrGs3nzYF+iTOyaqYiL3ZOR4Mz0Zg+HzYSDwzLGP8JajlYmrdAkBIjd8ZDzm
+O8fd8zpsvzf+4JM7O8Su1IHyp49XnelcPUO9Vjd3ZYe7JvlP4nNtQWL2YEjUyvIw
+bbG7PjQZ/bj5xettN/X7hn85cbHL15iq0YqGAyMb9tREB+fNpgyZy9s7sEPv2jr7
+73D1aVPpPVc8pzSl1hW7rsa0BId5v7ItN61h093zDS9JZ71xP73gzXPEdSaVfH27
+Ztfp/NOEI0efAdfFjVrLSqZyfrPGa6qvfZ9vSnD3bNlc4z+omX/57HRe3NqmlFcm
+pdaNlV/OtXYfmXpqv+eoPzveErud8VedqFzz6m05bdD/8ZFPLNbPpntfj2yr1U5P
+NuxIDW0mNhZ+0BORl90HH4m5evL5iVu1W9kAeammzraTvNbYO8nnXHq7ZS+xJXnW
+c3nkTE9l4qOdH2Y1TZyLaF/1afvw+ow/nih6Y7B092zI2PiNksaTdlt34+F7o9d9
+297zeccvrEh71pMwFvntkufe/J2L8A6/tW7GaG3sGFq72lH4Nw==
+=Y21F
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
