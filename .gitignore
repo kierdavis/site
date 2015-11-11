@@ -3,3 +3,4 @@ _site/
 dist/
 deploy.sh
 preview.sh
+logs/
