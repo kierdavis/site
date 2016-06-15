@@ -9,6 +9,4 @@ title: Home
 
 ### Projects
 
-* [Burglar alarm](http://dl.kierdavis.com/alarm.pdf) - PDF write-up (2013)
-* [Meal planner](http://dl.kierdavis.com/mealplanner.pdf) - PDF write-up (2014)
-* [K12a homebrew CPU](https://github.com/k12a-cpu) - Github repos (work-in-progress)
+* [K12a homebrew CPU](https://github.com/k12a-cpu) (work-in-progress)
