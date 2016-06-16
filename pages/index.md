@@ -28,14 +28,12 @@ These are projects that I consider either "active" or "finished". A larger list 
 
 inventive usernames incoming...
 
-* [kierdavis@gmail.com][email]
 * [kierdavis][github] on Github
 * [\@kierdavis][twitter] on Twitter
 * [kierdavis][keybase] on Keybase
 * [kierdavis][lastfm] on Last.fm
 * kier on freenode IRC (usually found hanging around in `#nim`, `#srobo` and `##linux`)
 
-[email]: mailto:kierdavis@gmail.com
 [github]: https://github.com/kierdavis
 [twitter]: https://twitter.com/kierdavis
 [keybase]: https://keybase.io/kierdavis
