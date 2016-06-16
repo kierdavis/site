@@ -10,3 +10,7 @@ title: Home
 ### Projects
 
 * [K12a homebrew CPU](https://github.com/k12a-cpu) (work-in-progress)
+
+### Miscellaneous
+
+* My [music collection](/music.html)
