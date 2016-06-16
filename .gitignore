@@ -1,6 +1,5 @@
 _cache/
 _site/
-dist/
 deploy.sh
 preview.sh
-logs/
+.stack-work/
