@@ -182,6 +182,15 @@ Shoutout to [deavmi][deavmi], whose own [music collection][deavmi-music] inspire
 </div>
 
 <div class="album">
+<p><em>A Heart Full Of Love</em>, by DARKPYRAMID (2014)</p>
+<p>dark, cyberpunk, ambient</p>
+<p>
+[bandcamp](https://dreamcatalogue.bandcamp.com/album/a-heart-full-of-love)
+[spotify](https://open.spotify.com/album/1E3Ys5w26zvMBvUqYSDgkr)
+</p>
+</div>
+
+<div class="album">
 <p><em>Eight</em>, by Tapage (2015)</p>
 <p>dark, electronic</p>
 <p>
