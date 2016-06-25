@@ -32,7 +32,7 @@ inventive usernames incoming...
 * [\@kierdavis][twitter] on Twitter
 * [kierdavis][keybase] on Keybase
 * [kierdavis][lastfm] on Last.fm
-* kier on freenode IRC (usually found hanging around in `#nim`, `#srobo` and `##linux`)
+* kier on freenode IRC (usually found hanging around in `#nim`, `#srobo` and `#overwatch`)
 
 [github]: https://github.com/kierdavis
 [twitter]: https://twitter.com/kierdavis
