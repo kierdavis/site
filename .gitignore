@@ -1,5 +1,5 @@
-_cache/
-_site/
+_cache
+_site
 deploy.sh
 preview.sh
-.stack-work/
+.stack-work
