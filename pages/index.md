@@ -2,11 +2,6 @@
 title: Kier Davis
 ---
 
-### Article-ish things
-
-* [Computing sin & cos in hardware with synthesisable Verilog](/cordic.html)
-* [The malloc4 algorithm for memory allocation](/malloc4.html)
-
 ### Projects
 
 These are projects that I consider either "active" or "finished". A larger list of projects (including those that I don't really maintain any more) is present on my [Github profile][github].
