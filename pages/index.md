@@ -25,10 +25,6 @@ I also contribute towards the [Nim programming language][nim], [NixOS package re
 [nixpkgs]: https://github.com/NixOS/nixpkgs
 [beets]: http://beets.io/
 
-### Miscellaneous
-
-* My [music collection](/music.html)
-
 ### Elsewhere on the web
 
 inventive usernames incoming...
