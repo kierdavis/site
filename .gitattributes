@@ -1,0 +1,2 @@
+# Exclude download files from Github's language statistics
+static/download/* linguist-vendored
