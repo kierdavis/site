@@ -13,12 +13,7 @@ These are projects that I consider either "active" or "finished". A larger list 
 * [lcd1602](https://github.com/kierdavis/lcd1602) - a Python library for controlling a 1602-compatible LCD screen on a Raspberry Pi
 * [K12a homebrew CPU](https://github.com/k12a-cpu) (work-in-progress)
 
-I also contribute towards the [Nim programming language][nim], [NixOS package collection][nixpkgs] and [beets music collection manager][beets].
-
 [blaze]: https://jaspervdj.be/blaze/
-[nim]: http://nim-lang.org/
-[nixpkgs]: http://nixos.org/nixpkgs/
-[beets]: http://beets.io/
 
 ### Elsewhere on the web
 
