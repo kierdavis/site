@@ -1,5 +1,5 @@
 ---
-title: Kier Davis
+title: Kier Ada Davis
 ---
 
 ### Projects
