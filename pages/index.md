@@ -2,27 +2,20 @@
 title: Kier Ada Davis
 ---
 
-### Projects
-
-These are projects that I consider either "active" or "finished". A larger list of projects (including those that I don't really maintain any more) is present on my [Github profile][github].
-
-* [TurtleLexer](https://github.com/kierdavis/TurtleLexer) - a Pygments lexer for the Turtle RDF format
-* [blaze-conditional-comments](https://github.com/kierdavis/blaze-conditional-comments) - a Haskell package for producing HTML conditional comments, compatible with the rest of the [blaze][blaze] framework
-* [gosch](https://github.com/kierdavis/gosch) - a Go package for reading and writing gEDA gschem schematic files
-* [nim-pcb](https://github.com/k12a-cpu/nim-pcb) - a Nim library for reading and writing gEDA PCB files
-* [lcd1602](https://github.com/kierdavis/lcd1602) - a Python library for controlling a 1602-compatible LCD screen on a Raspberry Pi
-* [K12a homebrew CPU](https://github.com/k12a-cpu) (work-in-progress)
-
-[blaze]: https://jaspervdj.be/blaze/
+I've finally figured out how to compile this website for the first time in a few years, so expect updates here!
 
 ### Elsewhere on the web
 
-inventive usernames incoming...
-
-* [kierdavis][github] on Github
-* [kierdavis][keybase] on Keybase
-* [kierdavis][lastfm] on Last.fm
+* Consume my ramblings about baking, coffee and transitioning [here][ig-personal]
+* Contemplate the various sequences of symbols I have typed recently [here][github]
+* Revel in the melodies my ears have received this week [here][lastfm]
+* Observe me in curious yet impractical clothing [here][ig-modelling]
+* Adopt the aforementioned clothing once it becomes starved of my attention [here][depop]
+* Confirm for yourself that I am in fact Kier Ada Davis [here][keybase] (don't take my word for it)
 
 [github]: https://github.com/kierdavis
 [keybase]: https://keybase.io/kierdavis
-[lastfm]: http://www.last.fm/user/kierdavis
+[lastfm]: https://www.last.fm/user/kierdavis
+[ig-personal]: https://www.instagram.com/newline.newlife/
+[ig-modelling]: https://www.instagram.com/miss.ada.phoenix/
+[depop]: https://www.depop.com/newlinenewlife/
