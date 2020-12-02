@@ -2,11 +2,10 @@ name:                site
 version:             0.1.0.0
 synopsis:            Source code of http://kierdavis.com/
 homepage:            https://github.com/kierdavis/site
-license:             MIT
+license:             PublicDomain
 license-file:        LICENSE
 author:              Kier Davis
-maintainer:          kierdavis@gmail.com
-copyright:           2016 Kier Davis
+maintainer:          me@kierdavis.com
 category:            Web
 build-type:          Simple
 -- extra-source-files:
