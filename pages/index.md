@@ -42,5 +42,5 @@ stages. I'm working on some looooooooong time scales here.
 [keybase]: https://keybase.io/kierdavis
 [lastfm]: https://www.last.fm/user/kierdavis
 [ig-personal]: https://www.instagram.com/newline.newlife/
-[ig-modelling]: https://www.instagram.com/miss.ada.phoenix/
+[ig-modelling]: https://www.instagram.com/hologrammatica/
 [depop]: https://www.depop.com/newlinenewlife/
