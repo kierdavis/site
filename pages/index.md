@@ -18,7 +18,7 @@ committing to finishing them to a self-acceptable standard, and I'm realising
 that putting crappily-formatted knowledge out there is preferable to not putting
 anything out there at all.
 
-What does this mean? It means these ports are a continuous work in progress,
+What does this mean? It means these posts are a continuous work in progress,
 as opposed to being "published" at some specific point in time. Expect bullet
 points, too-much-coffee ramblings, and sections that don't really follow from
 one another, until I happen to re-read it a few years later and realise a
